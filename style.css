@@ -8,10 +8,11 @@ body {
 
 h1 {
   font-size: 65px;
+  align-content: center;
 }
 
 h3 {
-
+  font-size: 40px;
 }
 
 element.style {
