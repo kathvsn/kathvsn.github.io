@@ -1,7 +1,14 @@
 html {
-  background-color: #FFFFFF;
+  background-color: #cebda7;
 }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
