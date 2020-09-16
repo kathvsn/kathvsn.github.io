@@ -24,12 +24,12 @@ a:link {
   text-decoration: none;
 }
 
-a:active {
-  color: #cbb0b5;
-}
-
 a:visited {
   color: #000000;
+}
+
+a:active {
+  color: #cbb0b5;
 }
 
 a:hover {
