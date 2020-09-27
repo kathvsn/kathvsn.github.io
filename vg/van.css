@@ -152,7 +152,6 @@ a.active {
   border: 10px solid #aec5e4;
 }
 #bioPotato {
-  margin-left: -245px;
   width: 360px;
   height: 250px;
   border: 10px solid #eadaad;
@@ -191,7 +190,7 @@ a.active {
 
 #bioBandage {
   width: 250px;
-  height: 285px;
+  height: 300px;
   float: right;
   border: 10px solid #aec5e4;
   margin-left: 10px;
