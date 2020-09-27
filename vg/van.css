@@ -96,19 +96,19 @@ a.active {
 /* styles the 3 images on front page */
 #introSunflower {
   width: 250px;
-  height: 242px;
+  height: 250px;
   border: 10px solid #aec5e4;
 }
 
 #introStarry{
   width: 350px;
-  height: 242px;
+  height: 250px;
   border: 10px solid #aec5e4;
 }
 
 #introBlossom {
-  width: 300px;
-  height: 242px;
+  width: 350px;
+  height: 250px;
   border: 10px solid #aec5e4;
 }
 
@@ -143,7 +143,7 @@ a.active {
 /* styling images on about page */
 #bioVincent {
   width: 230px;
-  height: 260px;
+  height: 250px;
   float: left;
   margin-left: 2px;
   margin-right: 10px;
@@ -190,7 +190,7 @@ a.active {
 
 #bioBandage {
   width: 250px;
-  height: 325px;
+  height: 310px;
   float: right;
   border: 10px solid #aec5e4;
   margin-left: 10px;
@@ -237,7 +237,7 @@ a.active {
 
 #bioEternity {
   width: 220px;
-  height: 227px;
+  height: 235px;
   float: left;
   border: 10px solid #aec5e4;
   margin-right: 10px;
@@ -250,7 +250,7 @@ a.active {
   color: #333333;
   background-color: #eadaad;
   padding: 15px 32px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -260,6 +260,6 @@ a.active {
   color: #333333;
   background-color: #eadaad;
   padding: 15px 32px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
