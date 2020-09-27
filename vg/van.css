@@ -114,6 +114,7 @@ a.active {
 
 .introRow {
   display: flex;
+  justify-content: center;
 }
 
 .introColumn {
@@ -250,7 +251,7 @@ a.active {
   color: #333333;
   background-color: #eadaad;
   padding: 15px 32px;
-  margin-top: 30px;
+  margin-top: 70px;
   margin-bottom: 10px;
 }
 
@@ -260,6 +261,6 @@ a.active {
   color: #333333;
   background-color: #eadaad;
   padding: 15px 32px;
-  margin-top: 30px;
+  margin-top: 70px;
   margin-bottom: 10px;
 }
