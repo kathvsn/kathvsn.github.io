@@ -152,6 +152,7 @@ a.active {
   border: 10px solid #aec5e4;
 }
 #bioPotato {
+  margin-left: -245px;
   width: 360px;
   height: 250px;
   border: 10px solid #eadaad;
@@ -185,6 +186,7 @@ a.active {
 
 .bioColumn {
   flex: 50%;
+  justify-content: center;
   padding: 5px;
 }
 
