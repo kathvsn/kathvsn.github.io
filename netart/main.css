@@ -1,0 +1,21 @@
+body{
+  text-align: center;
+  background: url('glitch.gif');
+  background-color: #000000;
+  background-size: cover;
+}
+h1{
+  font-size: 15vh;
+  font-family: 'VT323', monospace;
+}
+
+a:link{
+  color: #4cff00;
+  text-decoration: none;
+}
+a:visited{
+  color: #4cff00;
+}
+a:hover{
+  color: #FFFFFF;
+}
