@@ -1,0 +1,189 @@
+body {
+  background: url('pink.gif');
+  background-size: cover;
+  background-color: #fcdee3;
+  font-family: 'VT323', monospace;
+  line-height: 2.0;
+}
+.dock {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: #cbb0b5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 5px;
+}
+
+/* interesting site to learn about borders https://flaviocopes.com/css-border/ */
+.borderOut {
+  box-sizing: border-box;
+  border: outset 2px #af999d;
+}
+
+.currentBtn {
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.currentBtn:active {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: inset 2px #cc9999;
+}
+
+.alignThis {
+  text-align: center;
+}
+
+.unorganizedOne{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.unorganizedTwo{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.unorganizedThree {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.imgSizeOne {
+  margin-left: 70px;
+  padding: 20px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.imgSizeTwo {
+  padding: 20px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.imgSizeThree {
+  margin-left: 70px;
+  padding: 20px;
+  width: 25vw;
+  height: 25vh;
+}
+
+#homeBtn{
+  margin-top: 0px;
+  padding: 5px;
+}
+
+#githubBtn {
+  background: #cbb0b5;
+  padding: 5px;
+}
+
+#paint {
+  margin: 20px;
+  width: 40vw;
+  height: 60vh;
+}
+
+#paintMsg {
+  color: #303030;
+  font-size: 2vw;
+}
+
+a:link {
+  text-decoration: none;
+  color: #303030;
+}
+a:visited {
+  color: #303030;
+}
+a:hover {
+  color: #b79da2;
+}
+
+button {
+  font-family: 'VT323', monospace;
+}
+
+#folderIcon {
+  margin-top: 30vh;
+  width: 5vw;
+  height: 7vh;
+}
+
+.organizedOne {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.organizedTwo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.organizedThree {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.imgOrganized {
+  margin-top: 2vh;
+  margin-left: 20px;
+  padding: 20px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.organizedOne > img:hover {
+  width: 35vw;
+  height: 40vh;
+}
+
+.organizedTwo > img:hover {
+  width: 35vw;
+  height: 40vh;
+}
+
+.organizedThree > img:hover {
+  width: 35vw;
+  height: 40vh;
+}
+
+#wpIcon {
+  margin-top: 30vh;
+  width: 5vw;
+  height: 7vh;
+}
+
+li {
+  font-size: 5vh;
+}
+
+#list {
+  background: url('pink.gif');
+  background-size: cover;
+  background-color: #FFFFFF;
+}
+
+.toDoAlign {
+  text-align: center;
+  display: block;
+}
+
+.cross {
+  text-decoration: line-through;
+  text-decoration-color: #ff0000;
+}
