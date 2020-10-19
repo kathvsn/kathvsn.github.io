@@ -1,0 +1,90 @@
+/*
+For future uses:
+font-family: 'DM Serif Text', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  background: #e4dede;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  background: #b7a49e;
+  padding: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* styling navigation links */
+.navLinks {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 3vw;
+}
+
+a.navLinks:visited {
+  color: #FFFFFF;
+}
+
+a.navLinks:hover {
+  color: #383131;
+}
+
+a.navLinks.active {
+  color: #383131;
+}
+
+#centerHeader {
+  font-family: 'DM Serif Text', serif;
+  font-size: 4vh;
+  color: #FFFFFF;
+  line-height: 4vh;
+}
+
+/* footer */
+footer {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  background: #b7a49e;
+  padding: 5vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  bottom: 0;
+}
+
+#footerHeader {
+  font-family: 'DM Serif Text', serif;
+  font-size: 3vh;
+  color: #FFFFFF;
+}
+
+/* media query */
+/* mainly adjusting element size + getting rid of some images to save space according to browser width*/
+@media screen and (max-width: 1000px) {
+  .overview {
+    grid-template-columns: 1fr;
+  }
+
+  .overview2 {
+    grid-template-columns: 1fr;
+  }
+
+  .overviewImg {
+    display: none;
+  }
+
+}

@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  background: #e4dede;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  background: #b7a49e;
+  padding: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* styling navigation links */
+.navLinks {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 3vw;
+}
+
+a.navLinks:visited {
+  color: #FFFFFF;
+}
+
+a.navLinks:hover {
+  color: #383131;
+}
+
+a.navLinks.active {
+  color: #383131;
+}
+
+#centerHeader {
+  font-family: 'DM Serif Text', serif;
+  font-size: 4vh;
+  color: #FFFFFF;
+  line-height: 4vh;
+}
+
+/* product issue page */
+.prod {
+  display: grid;
+  grid-template-columns: 65% 30%;
+  grid-gap: 10px;
+}
+
+.prod2 {
+  display: grid;
+  grid-template-rows: 100%;
+}
+.prodInfo {
+  padding: 5vh;
+}
+
+.prodInfo2 {
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+#productHeader {
+  font-family: 'DM Serif Text', serif;
+  font-size: 5vh;
+  color: #383131;
+  text-align: center;
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.prodPara {
+  background-color: #d9ccc9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  color: #383131;
+  padding: 5vh;
+}
+
+.whiteningProd {
+  display: flex;
+  flex-direction: column;
+}
+
+#handcream {
+  width: 100%;
+  height: auto;
+  border: 10px solid #b7a49e;
+  box-shadow: 0 10px 10px 0 #b7a49e;
+  margin-top: 17vh;
+  margin-bottom: 3vh;
+}
+
+#acne {
+  width: 100%;
+  height: auto;
+  border: 10px solid #b7a49e;
+  box-shadow: 0 10px 10px 0 #b7a49e;
+  margin-top: 10vh;
+}
+
+/* footer */
+footer {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  background: #b7a49e;
+  padding: 5vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  bottom: 0;
+}
+
+#footerHeader {
+  font-family: 'DM Serif Text', serif;
+  font-size: 3vh;
+  color: #FFFFFF;
+}
+
+/* media query */
+/* mainly adjusting element size + getting rid of some images to save space according to browser width*/
+@media screen and (max-width: 1000px) {
+  .prod {
+    grid-template-columns: 1fr;
+  }
+
+  #handcream {
+    display: none;
+  }
+
+  #acne {
+    margin: auto;
+    width: 75%;
+  }
+
+  .prodInfo2 {
+    margin-top: 5vh;
+  }
+
+}
