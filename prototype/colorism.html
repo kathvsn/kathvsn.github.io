@@ -4,13 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="colorism.css">
-    <title>Illusion of Inclusion</title>
+    <title>Colorism</title>
   </head>
+
   <!-- navigation bar -->
   <nav>
-    <a class="navLinks" href="index.html"><b>HOME</b></a>
-    <a class="navLinks" href="product.html">PRODUCT ISSUE</a>
-    <a class="navLinks active" href="colorism.html">COLORISM</a>
+    <a class="navLinks" href="index.html">HOME</a>
+    <a class="navLinks" href="product.html">ISSUE</a>
+    <a class="navLinks active" href="colorism.html"><b>COLORISM</b></a>
     <h1 id="centerHeader">ILLUSION of <br>INCLUSION</h1>
     <a class="navLinks" href="promotion.html">PROMOTION</a>
     <a class="navLinks" href="help.html">HELP</a>
@@ -18,10 +19,115 @@
   </nav>
 
   <body>
-    <p>something will go here eventually </p>
+    <!-- first half of page -->
+    <!-- Hagan, Raylea. "Blind to the Impacts of Colorism within the Cosmetic Industry." Royal Road, vol. 3, no. 5, April 2019, pp. 39–53.-->
+    <!-- Definition of Colorism derived from Oxford Dictionary -->
+    <!-- main image -->
+    <div class="color">
+      <div class="colorismImg">
+        <!-- artwork by Mikenzi Jones https://www.instagram.com/kenzistudioco/ -->
+        <img id="shades" src="colorism.JPG">
+      </div>
+
+      <div class="colorDef">
+        <h3 id="colorHeader">What Is Colorism?</h3>
+        <p class="colorPara">
+          Colorism is generally defined as the discrimination against people with darker skin tones, usually among those within the same racial or ethnic groups.
+          The mentality of these groups is that lighter skin is a symbol of beauty and success, and it is something that can open up better opportunities for people,
+          therefore everyone should seek to appear lighter. They deem those with darker skin to be ugly and inferior and believe that dark skin is a flaw that needs to be corrected.
+        </p>
+        <!-- only for smaller screens, see the media query -->
+        <div class="onlyMedia">
+          <img id="shadesResponse" src="colorism.jpg">
+        </div>
+      </div>
+    </div>
+
+    <!-- second half of page -->
+    <!-- collapsible buttons -->
+    <!-- useful video that taught me how to do this: https://www.youtube.com/watch?v=jXTfoKkPtYY&ab_channel=dcode -->
+    <div class="expand">
+      <button id="color1" class="collapse">Difference Between Racism and Colorism</button>
+        <div class="content">
+          <!-- only for smaller screens, see the media query -->
+          <div class="onlyMedia">
+            <img id="rjResponse" class="colorismImg" src="rj.png">
+          </div>
+          <p class="collapsePara">
+            Racism is a systematic approach of depriving a specific group of people from opportunities, discrimination by laws or social norms or just simply creating an environment of animosity because of their racial identities.
+            Colorism is prejudicial or preferential treatment of same-race people based solely on their skin color. It is the notion of enjoying privilege for inheriting lighter skin tone. Colorism finds its roots in racism because,
+            without racism, someone's value and perceived superiority wouldn't be based on the color of their skin.
+          </p>
+          <!-- illustration by Jessica Marak https://jessicamarak.com/ -->
+          <img id="collapseImg1" class="colorismImg" src="rj.png">
+        </div>
+
+      <button id="color2" class="collapse">Colorism Among People of Color</button>
+        <div class="content">
+          <!-- only for smaller screens, see the media query -->
+          <div class="onlyMedia">
+            <img id="amongResponse" class="colorismImg" src="community.png">
+          </div>
+          <p class="collapsePara">
+            Colorism has been prevalent within communities of color for generations. Lighter skin has been equated to a greater standard as something to strive and attain for,
+            while darker skin is degraded and shamed, made out to be some kind of curse for those who are forced to live with it.
+          </p>
+          <!-- illustration by Jessica Marak https://jessicamarak.com/ -->
+          <img id="collapseImg2" class="colorismImg" src="community.png">
+        </div>
+
+      <button id="color3" class="collapse">Mentality</button>
+        <div class="content">
+          <!-- only for smaller screens, see the media query -->
+          <div class="onlyMedia">
+            <img id="facesResponse" class="colorismImg" src="faces.jpg">
+          </div>
+          <p class="collapsePara">
+            Raylea Hagan notes that in communities where colorism is prevalent, the mentality is that lighter skin comes with social capital. It is most commonly believed that women with lighter complexions
+            are more attractive and desirable which increases the chances of finding a spouse; however, many women have taken on skin bleaching for social benefits beyond the promise of marriage.
+          </p>
+          <!-- illustration by Jessica Marak https://jessicamarak.com/ -->
+          <img id="collapseImg3" class="colorismImg" src="faces.jpg">
+        </div>
+
+      <button id="color4" class="collapse">Influence On Family and Youth</button>
+        <div class="content">
+          <!-- only for smaller screens, see the media query -->
+          <div class="onlyMedia">
+            <img id="familyResponse" class="colorismImg" src="family.png">
+          </div>
+          <p class="collapsePara">
+            For some young and impressional people of color, skin bleaching is practiced among some of their family members. Although some people may never be subjected to this practice, there are relatives who are significantly
+            darker than them who are encouraged to bleach their skin. Those who have lighter skin are praised for their fair complexion and constantly complimented by other family members. They are made to believe that their
+            skin tone is something to be preserved and that they should be grateful for being born that way. It can be odd and uncomfortable to see one's own relatives being treated so differently from other relatives and friends,
+            whose dark skin was used against them from day one.
+          </p>
+          <!-- illustration by Katia Ptashka https://www.instagram.com/katiaptashka/ -->
+          <img id="collapseImg4" class="colorismImg" src="family.png">
+        </div>
+
+      <button id="color5" class="collapse">Using Your Privilege For Good</button>
+        <div class="content">
+          <!-- only for smaller screens, see the media query -->
+          <div class="onlyMedia">
+            <img id="quoteResponse" class="colorismImg" src="quote.jpg">
+          </div>
+          <p class="collapsePara">
+            Those who have lighter skin are much more likely to be afforded privileges that people of darker complexions do not have access to. They can use this privilege to advocate for the better treatment of people with darker skin.
+            An understanding of colorism will allow one to have more informed and effective conversations about race and skin color.
+          </p>
+          <img id="collapseImg5" class="colorismImg" src="quote.jpg">
+        </div>
+      </div>
+
   </body>
   <footer>
     <h3 id="footerHeader">Contact</h3>
-    <a class="navLinks" href="https://kathvsn.github.io/cisc2350.html">GITHUB</a>
+    <a class="navLinks" href="https://kathvsn.github.io/cisc2350.html" target="_blank">GITHUB</a>
+    <a class="navLinks" href="https://www.instagram.com/kathvsn/" target="_blank">INSTAGRAM</a>
   </footer>
+
+  <!-- javascript for the collapsible buttons -->
+  <!-- added it to the end because the elements need to load before js can run -->
+  <script src="midterm.js"></script>
 </html>

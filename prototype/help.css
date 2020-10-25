@@ -53,26 +53,18 @@ a.navLinks.active {
   line-height: 4vh;
 }
 
-/* overview grid */
-.overview {
+/* styling help page */
+.help {
   display: grid;
-  grid-template-columns: repeat(2,2fr);
+  grid-template-columns: 40% 57%;
   grid-gap: 10px;
 }
 
-.sectionHeader {
+.helpInfo {
   padding: 5vh;
 }
 
-.overviewImg {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5vh;
-  margin-left: 10vh;
-}
-
-#sellingHeader {
+#helpHeader {
   font-family: 'DM Serif Text', serif;
   font-size: 5vh;
   color: #383131;
@@ -80,74 +72,67 @@ a.navLinks.active {
   width: 100%;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  margin-left: 2vh;
 }
 
-#headerCaption {
+.helpPara {
+  background-color: #d9ccc9;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2vh;
+  font-size: 3vh;
   color: #383131;
-  text-align: center;
-  margin-left: 2vh;
-  width: 100%;
+  padding: 5vh;
 }
 
-.homepageBtns button{
-  cursor: pointer;
-  background-color: #383131;
-  font-family: 'DM Serif Text', serif;
-  font-size: 4vh;
-  color: #FFFFFF;
-  border: none;
-  padding: 20px;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  margin-left: 2vh;
-  display: block;
-  width: 100%;
+.helpImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/*
-mdn site abt transitions (super helpful):
- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
- */
-button:hover {
-  background-color: #a5918a;
-  color: #FFFFFF;
-  transition: background-color 2s ease-out;
-}
-
-a.homepageBtns {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-a.homepageBtns:visited {
-  color: #FFFFFF;
-}
-
-a.homepageBtns:hover {
-  color: #FFFFFF;
-}
-
-#ovModel {
-  width: 70%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 25px 0px #ba9f98, 45px 0px #9e827b, 65px 0px #705650;
+.onlyMedia {
+  display: none;
 }
 
 /* styling for templates */
-.overview2 {
+
+#compHeader {
+  font-family: 'DM Serif Text', serif;
+  font-size: 5vh;
+  color: #383131;
+  text-align: center;
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.help2 {
   display: grid;
-  grid-template-columns: repeat(3, 33.33%);
+  grid-template-columns: repeat(4, 24.5%);
   grid-gap: 10px;
+}
+
+.help3 {
+  display: grid;
+  grid-template-rows: 100%;
+}
+
+#speak {
+  max-width: 75%;
+  max-height: 75%;
+  border-radius: 50%;
+  box-shadow: -25px 0px #ba9f98, -45px 0px #9e827b, -65px 0px #705650;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 15vh;
+}
+
+#speakResponse {
+  display: none;
 }
 
 .temp {
   background-color: #c1afaa;
-  margin: 7vh;
   padding: 2vw;
+  margin: 5vh;
   box-shadow: 0 4px 8px 0 #b7a49e;
   transition: 0.3s;
 }
@@ -161,7 +146,7 @@ a.homepageBtns:hover {
   font-family: 'Montserrat', sans-serif;
   font-size: 2vh;
   color: #383131;
-  line-height: 2.0;
+  line-height: 1.5;
 }
 
 .tempCapHeader {
@@ -169,24 +154,15 @@ a.homepageBtns:hover {
   color: #383131;
 }
 
-#tempImg1 {
+.tempLinks {
+  text-decoration: none;
+}
+
+#tempImg1, #tempImg2, #tempImg3, #tempImg4, #tempImg5, #tempImg6, #tempImg7, #tempImg8 {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
 }
-
-#tempImg2 {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-#tempImg3 {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
 
 /* footer */
 footer {
@@ -206,10 +182,9 @@ footer {
   font-size: 3vh;
   color: #FFFFFF;
 }
-
 /* media query */
-/* mainly adjusting element size + getting rid of some images to save space according to browser width */
-@media screen and (max-width: 1100px), screen and (max-height: 600px) {
+/* mainly adjusting element size + getting rid of some images to save space according to browser width*/
+@media screen and (max-width: 1100px), screen and (max-height: 500px) {
   #centerHeader {
     display: none;
   }
@@ -222,41 +197,47 @@ footer {
     font-size: 2vw;
   }
 
+  footer {
+    height: 5%;
+  }
 
-  .overview {
+  .help {
     grid-template-columns: 1fr;
   }
 
-  .overview2 {
+  .help2 {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .overviewImg {
+  .helpPara {
+    font-size: 2.5vh;
+  }
+  .onlyMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #speak {
     display: none;
   }
 
-  .homepageBtns button{
-    font-size: 3vh;
+  #speakResponse {
+    display: block;
+    min-width: 10%;
+    min-height: 10%;
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 50%;
+    box-shadow: -100px 0px #9e827b, 100px 0px #ba9f98;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 
-  #tempImg1 {
+  #tempImg1, #tempImg2, #tempImg3, #tempImg4, #tempImg5, #tempImg6, #tempImg7, #tempImg8 {
     width: 50%;
     height: 50%;
-  }
-
-  #tempImg2 {
-    width: 50%;
-    height: 50%;
-  }
-
-  #tempImg3 {
-    width: 50%;
-    height: 50%;
-  }
-
-  footer {
-    height: 5%;
   }
 
 }
