@@ -131,6 +131,7 @@ a.navLinks.active {
 
 .temp {
   background-color: #c1afaa;
+  height: 60vh;
   padding: 2vw;
   margin: 5vh;
   box-shadow: 0 4px 8px 0 #b7a49e;
@@ -147,6 +148,10 @@ a.navLinks.active {
   font-size: 2vh;
   color: #383131;
   line-height: 1.5;
+}
+
+.brandCap {
+  font-size: 2vh;
 }
 
 .tempCapHeader {
@@ -184,6 +189,27 @@ footer {
 }
 /* media query */
 /* mainly adjusting element size + getting rid of some images to save space according to browser width*/
+/* i took david's advice to make two columns here */
+@media screen and (max-width: 1200px) {
+  .help2 {
+    grid-template-columns: 2fr 2fr;
+    text-align: center;
+  }
+
+  .temp {
+    height: auto;
+  }
+
+  #tempImg1, #tempImg2, #tempImg3, #tempImg4, #tempImg5, #tempImg6, #tempImg7, #tempImg8 {
+    width: 50%;
+    height: 50%;
+  }
+
+  .brandCap {
+    font-size: 1.7vh;
+  }
+}
+
 @media screen and (max-width: 1100px), screen and (max-height: 500px) {
   #centerHeader {
     display: none;
@@ -210,6 +236,13 @@ footer {
     text-align: center;
   }
 
+  .temp {
+    height: auto;
+  }
+
+  .brandCap {
+    font-size: 1.7vh;
+  }
   .helpPara {
     font-size: 2.5vh;
   }
