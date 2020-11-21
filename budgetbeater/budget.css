@@ -1,0 +1,733 @@
+/*font-family: 'Anonymous Pro', monospace;
+font-family: 'Libre Barcode 39', cursive;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* split page into 3 rows */
+.gameRow {
+  display: grid;
+  grid-template-rows: 3(1fr, 2fr, 1fr);
+  grid-row-gap: 1vh;
+}
+
+/* style row 1 */
+.row1{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-column-gap: 1vh;
+  text-align: center;
+}
+
+/* styling cart list */
+#cartList {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 3vh;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul, li {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 2vh;
+  text-align: left;
+}
+
+span {
+  background-color: #e2e2e2;
+}
+
+#listName {
+  text-align: center;
+  padding: 3vh;
+}
+
+#runningTotal {
+  font-family: 'Anonymous Pro', monospace;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* style row 2 */
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 1vh;
+  text-align: center;
+  height: auto;
+}
+
+/* fresh produce button */
+#fp{
+  font-family: 'Anonymous Pro', monospace;
+  background-color: transparent;
+  background-image: url("imgs/fpbtn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 20vw;
+  height: 70vh;
+}
+/* dry goods button */
+#dg {
+  font-family: 'Anonymous Pro', monospace;
+  background-color: transparent;
+  background-image: url("imgs/dgbtn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 20vw;
+  height: 70vh;
+}
+/* refrigerated goods button */
+#rg{
+  font-family: 'Anonymous Pro', monospace;
+  background-color: transparent;
+  background-image: url("imgs/rgbtn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 20vw;
+  height: 70vh;
+}
+/* frozen goods button */
+#fg{
+  font-family: 'Anonymous Pro', monospace;
+  background-color: transparent;
+  background-image: url("imgs/fgbtn.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 20vw;
+  height: 70vh;
+}
+
+/* produce section zoomed in */
+.produce {
+  text-align: center;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+}
+
+/* row of fresh produce buttons/items */
+.fpRow {
+  display: none;
+  padding: 2vh;
+}
+
+/* dry goods section zoomed in */
+.dgoods {
+  text-align: center;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+}
+
+/* row of dry goods buttons/items */
+.dgRow {
+  display: none;
+  padding: 2vh;
+}
+
+/* refrigerated goods section zoomed in */
+.rgoods {
+  text-align: center;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+}
+
+/* row of refrigerated goods buttons/items */
+.rgRow {
+  display: none;
+  padding: 2vh;
+}
+
+/* frozen goods section zoomed in */
+.fgoods {
+  text-align: center;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+}
+
+/* row of frozen goods buttons/items */
+.fgRow {
+  display: none;
+  padding: 2vh;
+}
+
+/* styling each fresh produce item */
+#it1 {
+  background-color: transparent;
+  background-image: url("imgs/apple.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+#it2 {
+  background-color: transparent;
+  background-image: url("imgs/banana.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it3 {
+  background-color: transparent;
+  background-image: url("imgs/orange.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it4 {
+  background-color: transparent;
+  background-image: url("imgs/mango.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it5 {
+  background-color: transparent;
+  background-image: url("imgs/strawberry.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it6 {
+  background-color: transparent;
+  background-image: url("imgs/corn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it7 {
+  background-color: transparent;
+  background-image: url("imgs/potato.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it8 {
+  background-color: transparent;
+  background-image: url("imgs/spinach.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it9 {
+  background-color: transparent;
+  background-image: url("imgs/broccoli.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#it10 {
+  background-color: transparent;
+  background-image: url("imgs/carrot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+/* for empty divs (just for space) */
+.empty {
+  display: none;
+  background-color: transparent;
+  height: 10vh;
+  width: 30vw;
+}
+
+/* styling each dry goods item */
+#dg1 {
+  background-color: transparent;
+  background-image: url("imgs/rice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+#dg2 {
+  background-color: transparent;
+  background-image: url("imgs/pasta.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg3 {
+  background-color: transparent;
+  background-image: url("imgs/tomatosauce.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg4 {
+  background-color: transparent;
+  background-image: url("imgs/peanut-butter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg5 {
+  background-color: transparent;
+  background-image: url("imgs/bread.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg6 {
+  background-color: transparent;
+  background-image: url("imgs/coffee.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg7 {
+  background-color: transparent;
+  background-image: url("imgs/cereal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg8 {
+  background-color: transparent;
+  background-image: url("imgs/flour.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg9 {
+  background-color: transparent;
+  background-image: url("imgs/tuna-can.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#dg10 {
+  background-color: transparent;
+  background-image: url("imgs/beans.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+/* styling each refrigerated goods item */
+#rg1 {
+  background-color: transparent;
+  background-image: url("imgs/eggs.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+#rg2 {
+  background-color: transparent;
+  background-image: url("imgs/yogurt.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg3 {
+  background-color: transparent;
+  background-image: url("imgs/cheese.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg4 {
+  background-color: transparent;
+  background-image: url("imgs/milk.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg5 {
+  background-color: transparent;
+  background-image: url("imgs/orangejuice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg6 {
+  background-color: transparent;
+  background-image: url("imgs/water.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg7 {
+  background-color: transparent;
+  background-image: url("imgs/tofu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg8 {
+  background-color: transparent;
+  background-image: url("imgs/salmon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg9 {
+  background-color: transparent;
+  background-image: url("imgs/sausages.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#rg10 {
+  background-color: transparent;
+  background-image: url("imgs/drumstick.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+/* styling each frozen goods item */
+#fg1 {
+  background-color: transparent;
+  background-image: url("imgs/waffle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+#fg2 {
+  background-color: transparent;
+  background-image: url("imgs/pizza.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg3 {
+  background-color: transparent;
+  background-image: url("imgs/chicken.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg4 {
+  background-color: transparent;
+  background-image: url("imgs/ice-cream.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg5 {
+  background-color: transparent;
+  background-image: url("imgs/popsicle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg6 {
+  background-color: transparent;
+  background-image: url("imgs/frozenveg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg7 {
+  background-color: transparent;
+  background-image: url("imgs/frozenfruit.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg8 {
+  background-color: transparent;
+  background-image: url("imgs/frozenseafood.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg9 {
+  background-color: transparent;
+  background-image: url("imgs/frozenburrito.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+#fg10 {
+  background-color: transparent;
+  background-image: url("imgs/frenchfries.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+  height: 10vh;
+}
+
+/* back button for sections */
+#backBtn {
+  display: none;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 2vh;
+  float: left;
+  cursor: pointer;
+  padding: 2vh;
+  margin: 2vh;
+}
+
+/* checkout button */
+#checkBtn {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 2vh;
+  float: right;
+  cursor: pointer;
+  padding: 2vh;
+  margin: 2vh;
+}
+
+/* receipt styling */
+
+#receipt {
+  display: grid;
+  grid-template-rows: 20%, 50%, 10%, 20%;
+  background-image: url(imgs/crump.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(2, 2fr);
+  margin: 5vh;
+}
+
+#recTitle, #lines {
+  display: none;
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 5vh;
+}
+
+.finalAmount {
+  text-align: left;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 3vh;
+  padding: 1vh;
+  display: none;
+}
+
+.finalItems {
+  display: none;
+  grid-template-columns: repeat(2,2fr);
+  font-family: 'Anonymous Pro', monospace;
+}
+
+#it {
+  text-align: left;
+  padding: 2vh;
+  font-size: 2vh;
+}
+
+#prc {
+  text-align: right;
+  padding: 2vh;
+  font-size: 2vh;
+}
+
+#lastTotal, #savedTotal, #points {
+  font-size: 2.5vh;
+}
+.again {
+  display: none;
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 5vh;
+  padding: 3vh;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 3.5vh;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #e5f2d0;
+}
+
+#endBar {
+  font-family: 'Libre Barcode 39', cursive;
+}

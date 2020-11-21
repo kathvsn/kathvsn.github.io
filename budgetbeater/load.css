@@ -1,0 +1,245 @@
+/*font-family: 'Anonymous Pro', monospace;
+font-family: 'Libre Barcode 39', cursive;
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10vh;
+  background-color: #FFFFF;
+}
+
+/* using step animation: https://designmodo.com/steps-css-animations/ */
+#budgetLoad {
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 10vh;
+  color: #000000;
+  overflow: hidden;
+  margin: auto;
+  animation: text 2s steps(25, end) both;
+}
+
+#lines {
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 6vh;
+}
+
+#bar {
+  font-size: 6vh;
+  font-family: 'Libre Barcode 39', cursive;
+}
+.alignThis {
+  text-align: center;
+}
+
+span {
+  background-color: #e5f2d0;
+}
+
+.btnCol {
+  align-items: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+#welcome{
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 5vh;
+  overflow: hidden;
+  margin: auto;
+}
+
+li{
+  font-family: 'Anonymous Pro', monospace;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.instructions{
+  font-family: 'Anonymous Pro', monospace;
+  text-align: center;
+  font-size: 3vh;
+}
+
+/*Shopping cart animation (make the cart go right and left)*/
+#shoppingcart {
+  position: absolute;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 8s;
+}
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg);
+  }
+  50% {
+    left: calc(100% - 100px);
+    -webkit-transform: rotateY(180deg);
+  }
+  98% {
+    -webkit-transform: rotateY(180deg);
+  }
+  100% {
+    left: 0;
+     -webkit-transform: rotateY(0deg);
+  }
+}
+
+button {
+  margin: 2vh;
+  width: 50%;
+  border: none;
+  font-size: 5vh;
+  font-family: 'Anonymous Pro', monospace;
+  color: #000000;
+  background-color: transparent;
+  line-height: 1.0;
+}
+
+button:hover {
+ border: none;
+ text-decoration: underline;
+ text-decoration-color: #e5f2d0;
+ cursor: pointer;
+}
+
+
+/* animation */
+@keyframes text{
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+/* media queries */
+@media screen and (max-width: 1200px), screen and (max-height: 600px) {
+  @keyframes text{
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 55%;
+    }
+  }
+
+  #budgetLoad {
+    font-size: 7vh;
+  }
+
+  #lines {
+    font-size: 4vh;
+  }
+
+  button {
+    font-size: 4vh;
+  }
+
+}
+
+@media screen and (max-width: 1000px), screen and (max-height: 600px) {
+  @keyframes text{
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 55%;
+    }
+  }
+
+  #budgetLoad{
+    font-size: 6vh;
+  }
+
+  #lines {
+    font-size: 4vh;
+  }
+
+  button {
+    font-size: 3vh;
+  }
+
+}
+
+@media screen and (max-width: 900px), screen and (max-height: 600px) {
+  @keyframes text{
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+
+  #budgetLoad {
+    font-size: 6vh;
+  }
+
+  #lines {
+    font-size: 4vh;
+  }
+
+  button {
+    font-size: 3vh;
+  }
+
+}
+
+@media screen and (max-width: 800px), screen and (max-height: 600px) {
+  @keyframes text{
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 55%;
+    }
+  }
+
+  #budgetLoad {
+    font-size: 5vh;
+  }
+
+  #lines {
+    font-size: 3vh;
+  }
+
+  button {
+    font-size: 3vh;
+  }
+
+}
+
+@media screen and (max-width: 650px), screen and (max-height: 600px) {
+  @keyframes text{
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  #budgetLoad {
+    font-size: 5vh;
+  }
+
+  #lines {
+    font-size: 3vh;
+  }
+
+  button {
+    font-size: 2vh;
+  }
+}

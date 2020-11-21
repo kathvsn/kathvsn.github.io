@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Libre+Barcode+39&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="budget.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="budget.js" defer></script>
+    <title>Budget Beater</title>
+  </head>
+  <body>
+    <!-- split into 3 rows-->
+    <div class="gameRow">
+      <!--  contains item list -->
+      <div class="row1">
+        <div class="cart">
+          <p id="cartList">
+            <span>
+              <b id="listName">&nbspITEMS IN CART&nbsp</b><br>
+              <ul>
+              </ul>
+              <p id="runningTotal">Total: $0.00</p>
+            </span>
+          </p>
+        </div>
+        <div class="empty">
+        </div>
+      </div>
+
+      <!--  contains 4 sections to shop -->
+      <div class="row2">
+        <!-- four buttons that represent each section -->
+        <div class="col">
+          <button id="fp" class="sectionBtn"></button>
+        </div>
+        <div class="col">
+          <button id="dg" class="sectionBtn"></button>
+        </div>
+        <div class="col">
+          <button id="rg" class="sectionBtn"></button>
+        </div>
+        <div class="col">
+          <button id="fg" class="sectionBtn"></button>
+        </div>
+
+        <!-- display fresh produce section -->
+        <!-- only displayed when fp button is clicked -->
+        <div id="produce">
+          <div class="fpRow">
+            <button id="it1" class="fresh"></button>
+            <button id="it2" class="fresh"></button>
+            <button id="it3" class="fresh"></button>
+            <button id="it4" class="fresh"></button>
+            <button id="it5" class="fresh"></button>
+          </div>
+          <div class="fpRow">
+            <button id="it6" class="fresh"></button>
+            <button id="it7" class="fresh"></button>
+            <button id="it8" class="fresh"></button>
+            <button id="it9" class="fresh"></button>
+            <button id="it10" class="fresh"></button>
+          </div>
+        </div>
+
+        <!-- dry goods section -->
+        <!-- only displayed when dg button is clicked -->
+        <div id="dgoods">
+          <div class="dgRow">
+            <button id="dg1" class="dry"></button>
+            <button id="dg2" class="dry"></button>
+            <button id="dg3" class="dry"></button>
+            <button id="dg4" class="dry"></button>
+            <button id="dg5" class="dry"></button>
+          </div>
+          <div class="dgRow">
+            <button id="dg6" class="dry"></button>
+            <button id="dg7" class="dry"></button>
+            <button id="dg8" class="dry"></button>
+            <button id="dg9" class="dry"></button>
+            <button id="dg10" class="dry"></button>
+          </div>
+        </div>
+
+        <!-- refrigerated goods section -->
+        <!-- only displayed when rg button is clicked -->
+        <div id="rgoods">
+          <div class="rgRow">
+            <button id="rg1" class="ref"></button>
+            <button id="rg2" class="ref"></button>
+            <button id="rg3" class="ref"></button>
+            <button id="rg4" class="ref"></button>
+            <button id="rg5" class="ref"></button>
+          </div>
+          <div class="rgRow">
+            <button id="rg6" class="ref"></button>
+            <button id="rg7" class="ref"></button>
+            <button id="rg8" class="ref"></button>
+            <button id="rg9" class="ref"></button>
+            <button id="rg10" class="ref"></button>
+          </div>
+        </div>
+
+        <!-- frozen goods section -->
+        <!-- only displayed when fg button is clicked -->
+        <div id="fgoods">
+          <div class="fgRow">
+            <button id="fg1" class="frozen"></button>
+            <button id="fg2" class="frozen"></button>
+            <button id="fg3" class="frozen"></button>
+            <button id="fg4" class="frozen"></button>
+            <button id="fg5" class="frozen"></button>
+          </div>
+          <div class="fgRow">
+            <button id="fg6" class="frozen"></button>
+            <button id="fg7" class="frozen"></button>
+            <button id="fg8" class="frozen"></button>
+            <button id="fg9" class="frozen"></button>
+            <button id="fg10" class="frozen"></button>
+          </div>
+        </div>
+
+        <!-- receipt at the end during checkout -->
+        <div class="empty">
+        </div>
+        <div id="receipt">
+          <audio id="cashReg" preload="auto">
+              <source src="cashregister.mp3"> </source>
+          </audio>
+          <div class="title">
+            <h1 id="recTitle"><b>RECEIPT</b></h1>
+            <p id="lines">-------</p>
+          </div>
+
+          <div class="finalItems">
+            <div id="it">
+              <h3><b>ITEM</b></h3>
+            </div>
+            <div id="prc">
+              <h3><b>PRICE</b></h3>
+            </div>
+          </div>
+
+          <div class="finalAmount">
+            <p id="lastTotal">Total: $</p>
+            <p id="savedTotal">Total Saved: $</p>
+            <p id="points">Score:</p>
+          </div>
+
+          <div class="again">
+            <p id="endBar">niceday</p>
+            <a href="index.html"><i>play again</i></a>
+          </div>
+        </div>
+        <div class="empty">
+        </div>
+
+
+      </div>
+
+      <!--  has the back + checkout buttons -->
+      <div class="row3">
+        <button id="backBtn">BACK</button>
+        <button id="checkBtn">CHECKOUT</button>
+      </div>
+    </div>
+
+  </body>
+</html>
