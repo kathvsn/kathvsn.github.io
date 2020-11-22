@@ -89,7 +89,7 @@ $("#rg").click(function() {
   $(".row2").css("grid-template-columns", "100%");
   $(".col").css("display", "none");
   $(".empty").css("display", "block");
-  $("#rgoods").css("background-color", "#9E8773");
+  $("#rgoods").css("background-color", "#dee3f1");
   $(".rgRow").css("display", "block");
   $("#backBtn").css("display", "block");
 });
@@ -99,7 +99,7 @@ $("#fg").click(function() {
   $(".row2").css("grid-template-columns", "100%");
   $(".col").css("display", "none");
   $(".empty").css("display", "block");
-  $("#fgoods").css("background-color", "#9E8773");
+  $("#fgoods").css("background-color", "#dfeaf0");
   $(".fgRow").css("display", "block");
   $("#backBtn").css("display", "block");
 });
