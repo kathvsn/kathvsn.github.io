@@ -209,8 +209,8 @@ function createCookie(name, value, days) {
   }
   else {
     var expires = "";
-    document.cookie = name+"="+value+expires+"; path=/";
   }
+  document.cookie = name+"="+value+expires+"; path=/";
 }
 
 // read a cookie for previous data
