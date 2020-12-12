@@ -190,9 +190,6 @@ function changeTextColor(elementId) {
   document.querySelector('h1').style.color = color;
   document.querySelector('h2').style.color = color;
   document.querySelector('h3').style.color = color;
-  createCookie("textColor1", color, 7);
-  createCookie("textColor2", color, 7);
-  createCookie("textColor3", color, 7);
 }
 
 // change the color of the mood circle based on the color input value
@@ -200,7 +197,6 @@ function changeTextColor(elementId) {
 function changeMoodColor(elementId1, elementId2) {
   var color = document.getElementById(elementId2).value;
   document.getElementById(elementId1).style.backgroundColor = color;
-  createCookie(elementId1, color, 7);
 }
 
 // how to create cookies using js!
@@ -235,21 +231,6 @@ function eraseCookie(name) {
 
 // when page loads, read cookie to see previous saved data
 var color = readCookie("backgroundColor");
-var textCol1 = readCookie("textColor1");
-var textCol2 = readCookie("textColor2");
-var textCol3 = readCookie("textColor3");
 if (color) {
   document.body.style.backgroundColor = color;
-}
-
-if (text1) {
-  document.querySelector('h1').style.color = textCol1;
-}
-
-if (text2) {
-  document.querySelector('h2').style.color = textCol2;
-}
-
-if (text3) {
-  document.querySelector('h3').style.color = textCol3;
 }
