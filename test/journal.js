@@ -131,7 +131,9 @@ function generateSong(){
 // change the color of the mood circle based on the color input value
 // takes two arguments, the first id being the day and the second being the id of the color input
 function changeMoodColor(elementId1, elementId2) {
-  document.getElementById(elementId1).style.backgroundColor = document.getElementById(elementId2).value;
+  var color = document.getElementById(elementId2).value;
+  document.getElementById(elementId1).style.backgroundColor = color;
+  createCookie("backgroundColor", color, 7);
 }
 
 let mainBtn = document.querySelector('#jnlBtn');
@@ -186,14 +188,7 @@ function displayMainPage(){
 
 // how to create cookies using js!
 // https://www.w3schools.com/js/js_cookies.asp
-
 // saves and changes background color using cookies
-function changeBackground(elementId){
-  var color = document.getElementById(elementId).value;
-  document.body.style.backgroundColor = color;
-  console.log(color);
-}
-
 function changeBgColor(elementId) {
   var color = document.getElementById(elementId).value;
   document.body.style.backgroundColor = color;
@@ -209,30 +204,34 @@ function changeTextColor(elementId) {
 
 
 function createCookie(name, value, days) {
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
-        var expires = "; expires="+date.toGMTString();
-    }
-    else var expires = "";
+  if(days){
+    var date = new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+  }
+  else{
+    var expires = "";
     document.cookie = name+"="+value+expires+"; path=/";
+  }
 }
 
 function readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+
+  return null;
 }
 
 function eraseCookie(name) {
     createCookie(name,"",-1);
 }
 
+// when page loads, read cookie to see previous saved data
 var color = readCookie("backgroundColor");
 if (color) {
   document.body.style.backgroundColor = color;
