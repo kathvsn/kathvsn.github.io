@@ -128,6 +128,12 @@ function generateSong(){
   songFrames.src = link;
 }
 
+// change the color of the mood circle based on the color input value
+// takes two arguments, the first id being the day and the second being the id of the color input
+function changeMoodColor(elementId1, elementId2) {
+  document.getElementById(elementId1).style.backgroundColor = document.getElementById(elementId2).value;
+}
+
 let mainBtn = document.querySelector('#jnlBtn');
 let photoBtn = document.querySelector('#phtBtn');
 let settingsBtn = document.querySelector('#setBtn');
@@ -178,6 +184,9 @@ function displayMainPage(){
   $(".settingSection").css("display", "none");
 }
 
+// how to create cookies using js!
+// https://www.w3schools.com/js/js_cookies.asp
+
 // saves and changes background color using cookies
 function changeBgColor(elementId) {
   var color = document.getElementById(elementId).value;
@@ -186,21 +195,13 @@ function changeBgColor(elementId) {
 }
 
 function changeTextColor(elementId) {
-  var color = document.getElementById(elementId).value;
-  document.querySelector('h1').style.color = color;
-  document.querySelector('h2').style.color = color;
-  document.querySelector('h3').style.color = color;
+  document.querySelector('h1').style.color = document.getElementById(elementId).value;
+  document.querySelector('h2').style.color = document.getElementById(elementId).value;
+  document.querySelector('h3').style.color = document.getElementById(elementId).value;
+  //document.querySelector('p').style.color = document.getElementById(elementId).value;
 }
 
-// change the color of the mood circle based on the color input value
-// takes two arguments, the first id being the day and the second being the id of the color input
-function changeMoodColor(elementId1, elementId2) {
-  var color = document.getElementById(elementId2).value;
-  document.getElementById(elementId1).style.backgroundColor = color;
-}
 
-// how to create cookies using js!
-// https://www.w3schools.com/js/js_cookies.asp
 function createCookie(name, value, days) {
   if(days){
     var date = new Date();
@@ -215,9 +216,9 @@ function createCookie(name, value, days) {
 
 function readCookie(name) {
   var nameEQ = name + "=";
-  var cookieSplit = document.cookie.split(';');
-  for(var i = 0;i < cookieSplit.length;i++) {
-    var c = cookieSplit[i];
+  var ca = document.cookie.split(';');
+  for(var i = 0;i < ca.length;i++) {
+    var c = ca[i];
     while (c.charAt(0)==' ') c = c.substring(1,c.length);
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
