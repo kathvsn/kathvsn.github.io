@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="journal.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="journal.js" defer></script>
+    <title>digital diary</title>
+  </head>
+  <!-- when body loads, display the current date and local time -->
+  <!-- load random affirmation and song -->
+  <body onload="displayDateAndTime(); generateAffirmation(); generateSong()">
+    <!-- heading contains date, time and two other tabs -->
+    <div class="heading">
+      <h3 id="dateTime"></h3>
+      <!-- buttons to photo log and settings -->
+      <div class="tabs">
+        <button class="journalBtns" id="jnlBtn"><b>Main</b></button>
+        <button class="journalBtns" id="phtBtn"><b>Photo Log</b></button>
+        <button class="journalBtns" id="setBtn">Settings</button>
+      </div>
+    </div>
+
+    <!-- horizontal line -->
+    <hr id="horz">
+
+    <!-- first part of the page displays daily affirmation + song -->
+    <div class="rowOne">
+      <div class="cols">
+        <!-- 31 daily affirmations :) -->
+        <!-- https://medium.com/@refinedliz/31-powerful-affirmations-for-every-area-of-your-life-e58aff6a70b2 -->
+        <div class="dailyMsg">
+          <p id="affirm"></p>
+        </div>
+        <div class="dailySong">
+          <p id="song"><iframe class="frame" src="" width="100%" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- weekly mood tracker; different moods depicted by color hues -->
+    <div class="moodHorz">
+      <h2 id="moodTrack">Weekly Mood Tracker</h2>
+      <div class="colorCode">
+        <h5 id="one">angry&nbsp&nbsp</h5>
+        <h5 id="two">anxious&nbsp&nbsp</h5>
+        <h5 id="three">happy&nbsp&nbsp</h5>
+        <h5 id="four">calm&nbsp&nbsp</h5>
+        <h5 id="five">sad&nbsp&nbsp</h5>
+        <h5 id="six">energetic&nbsp&nbsp</h5>
+        <h5 id="seven">exhausted</h5>
+      </div>
+      <div class="colKey"><span>&nbspColor Key&nbsp</span></div>
+    </div>
+
+    <!-- color inputs, on change it will change the color of the circle -->
+    <div class="row2">
+      <div class="week">
+        <div class="moodDay">
+          <p class="mdTitle">mon</p>
+          <input name="mCol" type="color" id="monColor" onchange="changeMoodColor('monMood','monColor')"/>
+          <p id="monMood"></p>
+        </div>
+        <div class="moodDay">
+          <p class="mdTitle">tues</p>
+          <input name="tuesCol" type="color" id="tuesColor" onchange="changeMoodColor('tuesMood','tuesColor')"/>
+          <p id="tuesMood"></p>
+        </div>
+        <div class="moodDay">
+          <p class="mdTitle">wed</p>
+          <input name="wedCol" type="color" id="wedColor" onchange="changeMoodColor('wedMood','wedColor')"/>
+          <p id="wedMood"></p>
+        </div>
+        <div class="moodDay">
+          <p class="mdTitle">thurs</p>
+          <input name="thursCol" type="color" id="thursColor" onchange="changeMoodColor('thursMood','thursColor')"/>
+          <p id="thursMood"></p>
+        </div>
+        <div class="moodDay">
+          <p class="mdTitle">fri</p>
+          <input name="friCol" type="color" id="friColor" onchange="changeMoodColor('friMood','friColor')"/>
+          <p id="friMood"></p>
+        </div>
+        <div class="moodDay">
+          <p class="mdTitle">sat</p>
+          <input name="satCol" type="color" id="satColor" onchange="changeMoodColor('satMood','satColor')"/>
+          <p id="satMood"></p>
+        </div>
+        <div class="moodDay">
+          <p class="mdTitle">sun</p>
+          <input name="sunCol" type="color" id="sunColor" onchange="changeMoodColor('sunMood','sunColor')"/>
+          <p id="sunMood"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- day to day to do lists, bullet journal style -->
+    <div class="bujoRow1">
+      <div class="dayLists">
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">monday</legend>
+            <p class="dayPara">
+              <ul>
+                <li>fold laundry</li>
+                <li>finish lab</li>
+                <li>respond to discussion board</li>
+              </ul>
+            </p>
+          </fieldset>
+        </div>
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">tuesday</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">wednesday</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">thursday</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <div class="bujoRow1">
+      <div class="dayLists">
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">friday</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">saturday</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">sunday</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+        <div class="toDo">
+          <fieldset>
+            <legend class="nameDay">notes</legend>
+            <p class="dayPara"></p>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <div class="settingSection">
+      <h1 id="setting">Settings</h1>
+      <div class="bgChange">
+          <h1 id="bgChangeTitle">Background Color: </h1>
+          <input name="bgColor" type="color" id="backColor" onchange="changeBgColor('backColor')"/>
+      </div>
+      <div class="textChange">
+          <h1 id="txtChangeTitle">Text Color: </h1>
+          <input name="txtColor" type="color" id="textColor" onchange="changeTextColor('textColor')"/>
+      </div>
+
+    </div>
+  </body>
+</html>
