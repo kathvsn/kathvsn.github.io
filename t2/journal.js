@@ -128,12 +128,6 @@ function generateSong(){
   songFrames.src = link;
 }
 
-// change the color of the mood circle based on the color input value
-// takes two arguments, the first id being the day and the second being the id of the color input
-function changeMoodColor(elementId1, elementId2) {
-  document.getElementById(elementId1).style.backgroundColor = document.getElementById(elementId2).value;
-}
-
 let mainBtn = document.querySelector('#jnlBtn');
 let photoBtn = document.querySelector('#phtBtn');
 let settingsBtn = document.querySelector('#setBtn');
@@ -182,6 +176,19 @@ function displayMainPage(){
   $("#phtBtn").css("backgroundColor", "#93817d");
   $("#setBtn").css("backgroundColor", "#93817d");
   $(".settingSection").css("display", "none");
+}
+
+// change the color of the mood circle based on the color input value
+// takes two arguments, the first id being the day and the second being the id of the color input
+function changeMoodColor(elementId1, elementId2) {
+  document.getElementById(elementId1).style.backgroundColor = document.getElementById(elementId2).value;
+  var colArray = ["monMood", "tuesMood", "wedMood", "thursMood", "friMood", "satMood", "sunMood"];
+  var colVal = document.getElementById(elementId2).value;
+  for(var i = 0; i < 7; i++){
+    if(elementId == colArray[i]){
+      createCookie(colArray[i], colVal, 7);
+    }
+  }
 }
 
 // saves and changes background color using cookies
@@ -233,4 +240,13 @@ function eraseCookie(name) {
 var color = readCookie("backgroundColor");
 if (color) {
     document.body.style.backgroundColor = color;
+}
+
+var colArray = ["monMood", "tuesMood", "wedMood", "thursMood", "friMood", "satMood", "sunMood"];
+var colorVal;
+for(var i = 0; i < 7; i++){
+  colorVal = readCookie(colArray[i]);
+  if (colorVal) {
+    document.getElementById(colArray[i]) = colorVal;
+  }
 }
