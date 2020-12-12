@@ -200,9 +200,9 @@ function changeTextColor(elementId) {
 
 // how to create cookies using js!
 // https://www.w3schools.com/js/js_cookies.asp
-// creates a new cookie that specifies the name of the cookie, the value it'll hold and the num of days until it expires
+// creates new cookie with a specified name, the value being stored and the num of days that the cookie will exist before being deleted
 function createCookie(name, value, days) {
-  if(days){
+  if (days) {
     var date = new Date();
     date.setTime(date.getTime()+(days*24*60*60*1000));
     var expires = "; expires="+date.toGMTString();
@@ -211,7 +211,7 @@ function createCookie(name, value, days) {
   document.cookie = name+"="+value+expires+"; path=/";
 }
 
-// read a cookie for previous data
+// reads in a cookie that is saved and returns value of a specified cookie
 function readCookie(name) {
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
@@ -220,15 +220,17 @@ function readCookie(name) {
     while (c.charAt(0)==' ') c = c.substring(1,c.length);
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
+
   return null;
 }
 
+// erases a cookie by setting its value to empty and existing date to a negative value
 function eraseCookie(name) {
-    createCookie(name,"",-1);
+  createCookie(name,"",-1);
 }
 
-// when the page loads it'll read the cookies for previously saved data
+// when the page loads it'll read the cookies
 var color = readCookie("backgroundColor");
-if(color){
-  document.body.style.backgroundColor = color;
+if (color) {
+    document.body.style.backgroundColor = color;
 }
