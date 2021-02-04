@@ -1,6 +1,4 @@
-/*font-family: 'DM Serif Text', serif;
-font-family: 'Montserrat', sans-serif;
-*/
+/* styling for journal page */
 * {
   box-sizing: border-box;
 }
@@ -102,36 +100,42 @@ body {
   background-color: #7f6968;
   border-radius: 50%;
 }
+
 #tuesMood {
   padding: 2vw;
   padding: 10vh;
   background-color: #7f6968;
   border-radius: 50%;
 }
+
 #wedMood {
   padding: 2vw;
   padding: 10vh;
   background-color: #7f6968;
   border-radius: 50%;
 }
+
 #thursMood {
   padding: 2vw;
   padding: 10vh;
   background-color: #7f6968;
   border-radius: 50%;
 }
+
 #friMood {
   padding: 2vw;
   padding: 10vh;
   background-color: #7f6968;
   border-radius: 50%;
 }
+
 #satMood {
   padding: 2vw;
   padding: 10vh;
   background-color: #7f6968;
   border-radius: 50%;
 }
+
 #sunMood {
   padding: 2vw;
   padding: 10vh;
@@ -239,7 +243,6 @@ fieldset {
 legend {
   width: auto !important;
 }
-
 
 .dayPara {
   font-family: 'Montserrat', sans-serif;
