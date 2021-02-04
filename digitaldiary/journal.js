@@ -1,7 +1,6 @@
 // displays an appropriate greeting depending on the local time
 function displayGreeting() {
   var greeting;
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours
   // returns hour for specified date according to the local time
   var time = new Date().getHours();
 
@@ -220,8 +219,6 @@ function changeAffirmColor(elementId) {
 
 }
 
-// how to create cookies using js!
-// https://www.w3schools.com/js/js_cookies.asp
 // creates new cookie with a specified name, the value being stored and the num of days that the cookie will exist before being deleted
 function createCookie(name, value, days) {
   if (days) {
@@ -331,8 +328,7 @@ $(".colKey").hover(function(){
   }
 );
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-var placeholder = "anything typed will be saved locally";
+var placeholder = " ";
 // if browser supports local storage implement the following function
 if (window.localStorage) {
   // if keys are pressed, trigger a function to save input
