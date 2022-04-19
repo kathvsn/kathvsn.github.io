@@ -1,79 +1,161 @@
 html {
-  background-color: #f9f9f9;
+  background-color: #FDF6EE;
+  overflow-x: hidden;
 }
 
-/* asterisk means all elements */
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Josefin Sans', sans-serif;
+#bgcoloring {
+  background-color: #FDF6EE;
 }
 
-h1 {
-  font-size: 65px;
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+/* 400 regular, 700 bold */
+#mainName {
+  padding: 2rem;
+  font-size: calc(3vw + 3vh);
+  font-weight: 700;
+  text-shadow: 1px 7px 7px rgba(0,0,0, 0.25);
 }
 
 p {
-  font-size: 20px;
+  font-size: calc(2vw+2vh);
 }
 
+
 a:link {
-  color: #000000;
+  color: #372E2E;
   text-decoration: none;
 }
 
 a:visited {
-  color: #000000;
+  color: #372E2E;
 }
 
 a:hover {
-  color: #cbb0b5;
+  color: #52463F;
+  text-decoration: none;
 }
 
 a.active {
-  color: #cbb0b5;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+  color: #52463F;
 }
 
 .header {
   text-align: center;
+  background-color: #FDF6EE;
+  color: #372E2E;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .nav {
-  background-color: #f9f9f9;
-  list-style: none;
-  text-align: center;
-  overflow: hidden;
-}
-
-.nav li {
-  display: inline;
+  background-color: #FDF6EE;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .nav a {
-  display: inline-block;
-  padding: 15px;
+  padding: 20px;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+#miniBio {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: calc(1vw + 1vh);
 }
 
-.column {
-  flex: 50%;
-  padding: 0 4px;
+#infoCard {
+  background-color: #372E2E;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  box-shadow: 0 4px 8px 0 #b7a49e;
+  transition: 0.3s;
+  color: #FDF6EE;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+#infoCard:hover {
+  box-shadow: 0 10px 30px 10px #6d5a59;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.card-title {
+  text-align: center;
+  font-weight: 700;
+}
+
+.card-header {
+  background-color: #372E2E;
+}
+
+.btn, .btn-link, .btn-link:hover, .btn-block, .btn-link:focus {
+  color: #FDF6EE;
+  margin: 2px;
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.bodyInfo {
+  background-color: #E3DDD6;
+  color: #372E2E;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.accordion {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* progress bars for programming languages */
+.progress-bar {
+  font-weight: 700;
+}
+
+#javaBar {
+  color: #372E2E;
+  background-color: #e5b4b3;
+}
+
+#pythonBar {
+  color: #372E2E;
+  background-color: #f2db98;
+}
+
+#javascriptBar {
+  color: #372E2E;
+  background-color: #cac3e5;
+}
+
+#cppBar {
+  color: #372E2E;
+  background-color: #9cc0d6;
+}
+
+#theme {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  padding: 10px 20px;
+  background-color: #FDF6EE;
+  color: #372E2E;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border-style: none;
+}
+
+.dark {
+  background-color:#372E2E;
+  color: #FDF6EE;
+}
+
+.proj {
+  margin: 2rem;
 }
