@@ -76,6 +76,7 @@ a.active {
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
+  margin-right: 0rem;
   box-shadow: 0 4px 8px 0 #b7a49e;
   transition: 0.3s;
   color: #FDF6EE;
@@ -111,6 +112,7 @@ a.active {
   margin-top: 2rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
+  margin-right: 0rem;
 }
 
 /* progress bars for programming languages */
@@ -158,4 +160,48 @@ a.active {
 
 .proj {
   margin: 2rem;
+}
+
+.projHead {
+  margin: 2rem;
+  color: #372E2E;
+}
+
+span {
+  background-color: #dbcac3;
+  padding: 15px;
+  margin-bottom: 1rem;
+}
+
+.projLink {
+  background-color: #dbcac3;
+  color: #372E2E;
+  padding: 2px;
+}
+
+.projInfo {
+  color: #372E2E;
+}
+
+.horz {
+  margin: 1rem;
+  height: 5px;
+  background-color: #372E2E;
+  border: none;
+}
+
+/* carousel */
+.carousel {
+  margin: 0 auto;
+  background-color: #372E2E;
+}
+
+.mag {
+  max-width: 50rem;
+  height: 20rem;
+  padding: 2vh;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  filter: invert(100%);
 }
