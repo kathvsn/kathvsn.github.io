@@ -76,7 +76,7 @@ a.active {
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
-  margin-right: 0rem;
+  margin-right: 1rem;
   box-shadow: 0 4px 8px 0 #b7a49e;
   transition: 0.3s;
   color: #FDF6EE;
@@ -112,7 +112,7 @@ a.active {
   margin-top: 2rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
-  margin-right: 0rem;
+  margin-right: 1rem;
 }
 
 /* progress bars for programming languages */
