@@ -20,6 +20,10 @@ $("#theme").on("click", function() {
         $(this).addClass("fa-moon");
         $(this).removeClass("fa-sun");
         $(this).css({"color": "#372E2E"});
+        $(".projInfo").css({"color": "#372E2E"});
+        $(".projHead").css({"color": "#372E2E"});
+        $(".horz").css({"background-color":"#372E2E"});
+        $(".carousel").css({"background-color":"#372E2E"});
     } else {
         // TURN ON DARK MODE
         $(".header").addClass("dark");
@@ -41,5 +45,15 @@ $("#theme").on("click", function() {
         $(this).removeClass("fa-moon");
         $(this).addClass("fa-sun");
         $(this).css({"color": "#FDF6EE"});
+        $(".projInfo").css({"color": "#FDF6EE"});
+        $(".projHead").css({"color": "#FDF6EE"});
+        $(".horz").css({"background-color":"#FDF6EE"});
+        $(".carousel").css({"background-color":"#FDF6EE"});
+        $(".projLink").css({"color":"#372E2E"});
+        $(".projLink").on("mouseover", function() {
+            $(this).css({"color": "#5b4e4e"});
+        }).on("mouseout", function() {
+            $(this).css({"color": "#372E2E"});
+        });
     }
 });
